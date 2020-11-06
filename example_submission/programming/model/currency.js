@@ -8,13 +8,17 @@ module.exports = (sequelize, Datatype) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      currency: {
+      main: {
         type: Datatype.STRING,
-        field: "currency",
+        field: "main",
       },
-      perETH: {
+      secondary: {
+        type: Datatype.STRING,
+        field: "secondary",
+      },
+      rate: {
         type: Datatype.DECIMAL,
-        field: "perETH",
+        field: "rate",
       },
     },
     {

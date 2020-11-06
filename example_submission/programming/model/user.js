@@ -20,10 +20,6 @@ module.exports = (sequelize, Datatype) => {
         type: Datatype.STRING,
         field: "currency",
       },
-      type: {
-        type: Datatype.ENUM("user", "admin"),
-        field: "type",
-      },
     },
     {
       freezeTableName: true,
