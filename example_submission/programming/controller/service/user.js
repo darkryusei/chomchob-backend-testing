@@ -1,4 +1,4 @@
-const db = require("../../model/index");
+const db = require("../../model");
 const user = db.user;
 module.exports = {
   addUser: (data) => {
@@ -11,5 +11,7 @@ module.exports = {
   findAll: () => {
     return user.findAll();
   },
-  exchangeToUser: () => {},
+  updateBalance: (id, balance) => {
+    return user.update({ balance: balance }, { where: { id: id } });
+  },
 };

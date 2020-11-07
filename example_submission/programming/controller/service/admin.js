@@ -1,8 +1,16 @@
-const db = require("../../model/index");
-const user = db.user;
+const db = require("../../model");
+const currency = db.currency;
 module.exports = {
-  increaseBalance: () => {},
+  increaseBalance: (id, balance) => {},
   decreaseBalance: () => {},
-  addCrypto: () => {},
+  addCrypto: (data) => {
+    return currency.create(data);
+  },
+  findCrypto: (main, secondary) => {
+    return currency.findOne({ where: { main: main, secondary: secondary } });
+  },
+  findAll: () => {
+    return currency.findAll();
+  },
   changeRate: () => {},
 };
