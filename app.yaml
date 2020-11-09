@@ -1,0 +1,17 @@
+runtime: nodejs12
+
+env_variables:
+  PORT: 8080
+  DB_HOST: "35.198.239.211"
+  DB_USER: "root"
+  DB_PASS: "localhost"
+  DB_NAME: "crypto"
+  CLOUD_SQL_CONNECTION_NAME: "chomchob-test:asia-southeast1:chomchob-test"
+
+handlers:
+  # For all URI
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    # npm start
+    script: auto

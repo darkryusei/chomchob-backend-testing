@@ -66,7 +66,7 @@ module.exports = {
         let wallet_b = await userService.findCurrencyB(
           req.body.currencyB.toUpperCase()
         );
-        if (wallet_a && wallet_b) {
+        if (wallet_a !== null && wallet_b !== null) {
           if (wallet_a.balance > 0) {
             if (wallet_a.currency !== wallet_b.currency) {
               const exchange = await currencyService.findRate(
@@ -99,7 +99,6 @@ module.exports = {
             });
           }
         } else {
-          console.log(balance_a, balance_b);
           res.status(200).send({
             status: "failed",
             message: "Plase check Crypto First",
@@ -111,6 +110,7 @@ module.exports = {
           .send({ status: "failed", reason: "User Must be A or B." });
       }
     } catch (error) {
+      console.log(error);
       res.status(200).send({ status: "error", reason: error.message });
     }
   },

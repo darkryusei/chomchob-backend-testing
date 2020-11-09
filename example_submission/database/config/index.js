@@ -6,9 +6,7 @@ const config = {
   HOST_DB: process.env.HOST || "localhost",
   USER_DB: process.env.USER_DB || "root",
   PASS_DB: process.env.PASS_DB || "localhost",
-  DATABASE: process.env.NAME_DB || "crypto",
-  SOCKETPATH:
-    `/cloudsql/${process.env.CLOUD_SQL_CONNECTION_NAME}` || "googlecloud",
+  DATABASE: process.env.NAME_DB || "code",
 };
 
 module.exports = config;
