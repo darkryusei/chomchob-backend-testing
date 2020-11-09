@@ -1,8 +1,7 @@
 const db = require("../../model");
 const currency = db.currency;
+const user = db.user;
 module.exports = {
-  increaseBalance: (id, balance) => {},
-  decreaseBalance: () => {},
   addCrypto: (data) => {
     return currency.create(data);
   },
@@ -12,5 +11,7 @@ module.exports = {
   findAll: () => {
     return currency.findAll();
   },
-  changeRate: () => {},
+  changeRate: (id, rate) => {
+    return currency.update({ rate: rate }, { where: { id: id } });
+  },
 };

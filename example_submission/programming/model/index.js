@@ -24,7 +24,8 @@ const sequelize = new Sequelize("crypto", "root", "localhost", {
 const db = {};
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-db.user = require("./user")(sequelize, Sequelize);
+db.userA = require("./user_a")(sequelize, Sequelize);
+db.userB = require("./user_b")(sequelize, Sequelize);
 db.currency = require("./currency")(sequelize, Sequelize);
 
 module.exports = db;

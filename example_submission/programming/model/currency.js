@@ -17,7 +17,7 @@ module.exports = (sequelize, Datatype) => {
         field: "secondary",
       },
       rate: {
-        type: Datatype.DECIMAL,
+        type: Datatype.FLOAT,
         field: "rate",
       },
     },
