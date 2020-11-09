@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "34d99740-acff-4c90-b7d3-ddee655d4002",
+		"name": "Chomchop",
+		"description": "For Test example test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(new) all crypto of user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/api/admin/crypto/getall",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"crypto",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(new) add crypto for user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"B\",\r\n    \"currency\": \"BTC\",\r\n    \"balance\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/api/admin/crypto/add",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"crypto",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(new) add crypto rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"main\": \"BTC\",\r\n    \"secondary\": \"ETH\",\r\n    \"rate\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/api/admin/crypto/rate/add",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"crypto",
+						"rate",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(new) increase crypto to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"A\",\r\n    \"currency\": \"BTC\",\r\n    \"balance\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/api/admin/balance/increase",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"balance",
+						"increase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(new) decrease crypto to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"A\",\r\n    \"currency\": \"BTC\",\r\n    \"balance\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/api/admin/balance/decrease",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"balance",
+						"decrease"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(new) transfer User to User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"receiver\": \"A\",\r\n    \"currencyA\": \"ETH\",\r\n    \"currencyB\": \"BTC\",\r\n    \"balance\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/api/user/crypto/transfer",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"crypto",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(new) change crypto rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"main\": \"BTC\",\r\n    \"secondary\": \"ETH\",\r\n    \"rate\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://chomchob-test.et.r.appspot.com/api/admin/crypto/rate/change",
+					"protocol": "https",
+					"host": [
+						"chomchob-test",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"crypto",
+						"rate",
+						"change"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
